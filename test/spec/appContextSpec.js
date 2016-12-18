@@ -15,7 +15,7 @@ describe('appContext', function () {
     var app, productInfo;
 
     before(function (done) {
-        require(['js/util/appContext', 'json!config/productinfo'], function (appContext, productInfoJson) {
+        require(['util/appContext', 'json!config/productinfo'], function (appContext, productInfoJson) {
             //console.log("productinfo: ", JSON.stringify(productInfoJson, null, 2));
             productInfo = productInfoJson;
             app = appContext.getInstance(mockcore, mocklogger);

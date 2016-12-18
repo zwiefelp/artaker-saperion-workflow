@@ -19,3 +19,17 @@ needed tools:
 ○ npm install -g bower-art-resolver
 ● im Pfad des zips:
 ○ npm install && bower install
+
+Documentation
+https://github.com/saperion/ecms-js-sdk/tree/master/docs
+● Samples
+https://github.com/saperion/ecms-js-sdk/tree/master/examp
+les
+● Current Download URLs (subject to change)
+○ Unstable Versions (Latest)
+■ https://artifacts-eu.s3.amazonaws.com/saperion/ecm/client/sdk/latest/saperion-sdk-browser-debug-snapshot.js
+■ https://artifacts-eu.s3.amazonaws.com/saperion/ecm/client/sdk/latest/saperion-sdk-browser-min-snapshot.js
+○ Stable Versions (Latest)
+■ https://artifacts-eu.s3.amazonaws.com/saperion/ecm/client/sdk/latest/saperion-sdk-browser-min.js
+■ https://artifacts-eu.s3.amazonaws.com/saperion/ecm/client/sdk/latest/saperion-sdk-browser-debug.js
+
