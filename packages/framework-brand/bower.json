@@ -1,0 +1,9 @@
+{
+    "name": "framework-brand",
+    "private": true,
+    "version": "1.0.0",
+    "main": "src/exports",
+    "dependencies": {
+        "framework-core": "^2"
+    }
+}

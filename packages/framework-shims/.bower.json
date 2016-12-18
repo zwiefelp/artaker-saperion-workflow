@@ -1,0 +1,10 @@
+{
+  "name": "framework-shims",
+  "private": true,
+  "version": "1.0.0",
+  "main": "src/exports",
+  "_source": "art://framework-shims/framework-shims",
+  "_target": "^1",
+  "_release": "1.0.0",
+  "_originalSource": "framework-shims"
+}

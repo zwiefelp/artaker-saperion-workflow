@@ -1,0 +1,17 @@
+{
+  "name": "framework-require-plugins",
+  "private": true,
+  "version": "1.1.1",
+  "main": "src/exports",
+  "dependencies": {
+    "framework-shims": "^1",
+    "less": "^2"
+  },
+  "devDependencies": {
+    "framework-runtime": "^1"
+  },
+  "_source": "art://framework-require-plugins/framework-require-plugins",
+  "_target": "^1",
+  "_release": "1.1.1",
+  "_originalSource": "framework-require-plugins"
+}
