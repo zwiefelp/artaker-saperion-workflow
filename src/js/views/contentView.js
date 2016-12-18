@@ -150,6 +150,7 @@ define(['framework-core', 'framework-controls', 'template!content/contentView.ht
 
                                         task.document.refresh().then(
                                             function (doc) {
+                                                console.log(doc.archive)
                                                 item.archive = doc.archive.name                
                                                 item.fieldname = []
                                                 var archiveConfig = self.appContext.getArchiveConfig()

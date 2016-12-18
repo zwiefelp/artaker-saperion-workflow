@@ -9468,7 +9468,6 @@ function Document(serviceConnection, json, archive) {
     //TODO: remove later: just temporary
     var _contentJson = '';
 
-
     var _archive = {};
 
     if (archive !== undefined) {
@@ -9517,7 +9516,10 @@ function Document(serviceConnection, json, archive) {
                     //if json.archiveReference is NOT available in JSON: call was from potetially from archive.getDocuments
                     //There is no need to update _archive if its already existing (would "never" change and from document.update there will be just a reference)
                     //_archive = new Archive(_self.serviceConnection, json.archiveReference);
+                    //_archive = json.archiveReference
                 }
+
+                _archive = json.archiveReference
 
                 //indexData
                 _indexData = json.indexData || _indexData;
