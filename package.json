@@ -13,18 +13,19 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Perceptive-Cloud/artaker-saperion-workflow.git"
+    "url": "git+https://github.com/zwiefelpartaker-saperion-workflow.git"
   },
   "keywords": [
     "experience",
-    "saperion"
+    "saperion",
+    "artaker"
   ],
-  "author": "Team Konoha",
+  "author": "Peter Zwiefelhofer",
   "license": "",
   "bugs": {
-    "url": "https://github.com/Perceptive-Cloud/artaker-saperion-workflow/issues"
+    "url": "https://github.com/zwiefelp/artaker-saperion-workflow/issues"
   },
-  "homepage": "https://github.com/Perceptive-Cloud/artaker-saperion-workflow#readme",
+  "homepage": "https://github.com/zwiefelp/artaker-saperion-workflow#readme",
   "devDependencies": {
     "amd-loader": "0.0.5",
     "bower": "^1.7.9",
