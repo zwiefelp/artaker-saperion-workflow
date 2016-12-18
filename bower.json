@@ -1,0 +1,14 @@
+{
+    "name": "artaker-saperion-workflow",
+    "version": "0.2.0",
+    "main": "src/exports",
+    "private": true,
+    "dependencies": {
+        "framework-shell": "^3",
+        "framework-core": "^2",
+        "framework-controls": "^3",
+        "framework-home": "^1",
+        "jquery": "^2",
+        "lodash": "^4"
+    }
+}

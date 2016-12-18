@@ -1,0 +1,36 @@
+{
+    "helpUrl": "http://example.com/",
+    "helpPage": "index.html",
+    
+    "framework-runtime": {
+        "devPackages": {
+            "devHelpers": "devPackages/devHelpers/bower.json",
+            "artaker-saperion-workflow":"devPackages/artaker-saperion-workflow/bower.json"
+        },
+
+        "modules": [
+            "artaker-saperion-workflow:MainModule"
+        ]
+    },
+
+    "framework-core": {
+        "clientSession": "artaker-saperion-workflow:LoginHandler",
+        "loggingMethod": "Console"
+
+    },
+
+    "unittest": {
+        "tests": {
+            "package-template": "package-template/test/specs"
+        }
+    },
+    "framework-brand": {
+        "en": {
+            "productName": "Saperion",
+            "productFullName": "Saperion Experience",
+            "loginLogo": "./resources/images/ACS_Login.png",
+            "loginLogoMobile": "./resources/images/ACS_Login.png",
+            "headerLogo": "./resources/images/Icon-Artaker-64.ico"
+        }
+    }
+}

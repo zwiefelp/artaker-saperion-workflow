@@ -1,0 +1,105 @@
+﻿<div id="documentView">
+    <div data-pane="toolbar" data-dock="top" data-sizing="fixed">
+        <div id="viewerToolbar" class="toolbar viewer-toolbar" style="visibility: hidden">
+            <div class="toolbar__section toolbar__section--left">
+                <div id="leftPageButtons" class="toolbar-group" data-collapsable-group="true">
+                    <button id="btnRotateLeft" data-rotate="left"
+                            title="{{i18n 'viewer.toolbar.btnRotateLeft'}}"
+                            aria-label="{{i18n 'viewer.toolbar.btnRotateLeft'}}">
+                        <span class="icon icon-rotate_left"></span>
+                    </button>
+                    <button id="btnRotateRight" data-rotate="right"
+                            title="{{i18n 'viewer.toolbar.btnRotateRight'}}"
+                            aria-label="{{i18n 'viewer.toolbar.btnRotateRight'}}">
+                        <span class="icon icon-rotate_right"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="toolbar__section toolbar__section--center">
+
+
+                <button id="prevPageButton"
+                        title="{{i18n 'viewer.toolbar.prevPageButton'}}"
+                        aria-label="{{i18n 'viewer.toolbar.prevPageButton'}}">
+                    <span class="icon icon-triangle_with_line_left"></span>
+                </button>
+
+                <input id="current-page-display"
+                       type="number"
+                       title="{{i18n 'viewer.toolbar.lblCurrentPage'}}"
+                       value="1"
+                       style="width:50px"
+                />
+                <input id="page-count-display"
+                       type="text"
+                       title="{{i18n 'viewer.toolbar.lblPageCount'}}"
+                       disabled=""
+                       value="0"
+                       style="width:50px"
+                />
+
+                <button id="nextPageButton"
+                        title="{{i18n 'viewer.toolbar.nextPageButton'}}"
+                        aria-label="{{i18n 'viewer.toolbar.nextPageButton'}}">
+                    <span class="icon icon-triangle_with_line_right"></span>
+                </button>
+
+            </div>
+            <div class="toolbar__section toolbar__section--right">
+                <div id="pageButtons" class="toolbar-group" data-collapsable-group="true">
+                    <div id="zoomButtons" class="button-group">
+                        <button id="btnZoomOut" class="containerless zoom-out"
+                                title="{{i18n 'viewer.toolbar.btnZoomOut'}}"
+                                aria-label="{{i18n 'viewer.toolbar.btnZoomOut'}}">
+                            <span class="icon icon-zoom_out"/>
+                        </button>
+                        <button id="btnZoomIn" class="containerless zoom-in"
+                                title="{{i18n 'viewer.toolbar.btnZoomIn'}}"
+                                aria-label="{{i18n 'viewer.toolbar.btnZoomIn'}}">
+                            <span class="icon icon-zoom_in"/>
+                        </button>
+                    </div>
+                </div>
+
+                <button id="btnBestFit" class="containerless" data-size="bestFit"
+                        title="{{i18n 'viewer.toolbar.btnBestFit'}}"
+                        aria-label="{{i18n 'viewer.toolbar.btnBestFit'}}"
+                        role="checkbox">
+                    <span class="icon icon-best_fit"></span>
+                </button>
+                <button id="btnFitWidth" class="containerless" data-size="fitWidth"
+                        title="{{i18n 'viewer.toolbar.btnFitWidth'}}"
+                        aria-label="{{i18n 'viewer.toolbar.btnFitWidth'}}"
+                        role="checkbox">
+                    <span class="icon icon-fit_to_width"></span>
+                </button>
+                <button id="btnFitHeight" class="containerless" data-size="fitHeight"
+                        title="{{i18n 'viewer.toolbar.btnFitHeight'}}"
+                        aria-label="{{i18n 'viewer.toolbar.btnFitHeight'}}"
+                        role="checkbox">
+                    <span class="icon icon-fit_to_height"></span>
+                </button>
+                <button id="btnOriginalSize" class="containerless" data-size="fitOriginal"
+                        title="{{i18n 'viewer.toolbar.btnOriginalSize'}}"
+                        aria-label="{{i18n 'viewer.toolbar.btnOriginalSize'}}"
+                        role="checkbox">
+                    <span class="icon icon-actual_size"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="documentViewViewer" class="viewer-pane" data-pane="viewer">
+        <canvas id="the-canvas" style="visibility: hidden"></canvas>
+        <div id="noContent" class="zero-state" style="visibility: visible">
+            <span class="icon icon-document_outline icon-64">
+                <p>{{i18n 'viewer.content.noContent'}}</p>
+            </span>
+        </div>
+        <div id="noPdfContent" class="zero-state" style="visibility: hidden">
+            <span class="icon icon-document_outline icon-64">
+                <p>{{i18n 'viewer.content.errorInLoad'}}</p>
+            </span>
+        </div>
+    </div>
+</div>

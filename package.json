@@ -1,0 +1,53 @@
+{
+  "name": "artaker-saperion-workflow",
+  "version": "0.0.1",
+  "description": "Saperion Experience Template",
+  "main": "src/exports",
+  "scripts": {
+    "build": "node ./node_modules/gulp/bin/gulp dist",
+    "test": "node ./node_modules/mocha/bin/mocha test/spec/simpleModuleSpec.js",
+    "postinstall": "node ./node_modules/bower/bin/bower install",
+    "start": "node ./node_modules/gulp/bin/gulp serve",
+    "ci": "node ./node_modules/gulp/bin/gulp ci"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Perceptive-Cloud/artaker-saperion-workflow.git"
+  },
+  "keywords": [
+    "experience",
+    "saperion"
+  ],
+  "author": "Team Konoha",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/Perceptive-Cloud/artaker-saperion-workflow/issues"
+  },
+  "homepage": "https://github.com/Perceptive-Cloud/artaker-saperion-workflow#readme",
+  "devDependencies": {
+    "amd-loader": "0.0.5",
+    "bower": "^1.7.9",
+    "bower-art-resolver": "^2.0.6",
+    "chai": "^3.5.0",
+    "del": "~2.2.0",    
+    "eslint-html-reporter": "^0.5.2",    
+    "gulp": "~3.9.0",
+    "gulp-cli": "^1.2.2",
+    "gulp-connect": "^5.0.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-istanbul": "^1.1.1",
+    "gulp-istanbul-report": "0.0.1",
+    "gulp-mocha": "^3.0.1",
+    "gulp-mocha-phantomjs": "^0.11.0",
+    "gulp-open": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-zip": "^3.2.0",
+    "jquery": "^2",        
+    "mocha": "^3.0.2",
+    "mocha-junit-reporter": "^1.12.1",
+    "mocha-phantomjs-istanbul": "0.0.2",
+    "phantomjs": "^2.1.7",
+    "utils": "^0.3.1"
+  }
+}

@@ -1,0 +1,156 @@
+#contentView {
+    height: 100%;
+    width: 100%;
+
+    .approval-list-item {
+        padding: 5px;
+        width: inherit;
+
+        &:hover {
+            .approval-actions {
+                visibility: visible;
+            }
+        }
+
+        .approval-actions {
+            margin-top: 10px;
+            visibility: hidden;
+        }
+    }
+
+    .item-container[aria-selected=true] .approval-actions {
+        visibility: visible;
+    }
+
+    .fullWidth {
+        width: 100%;
+    }
+
+    
+    .details {
+        width: 80%;
+    }
+
+    .approval-list-invoice-summary {
+        width: inherit;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        td span {
+            margin: 5px;
+        }
+    }
+
+    .red {
+        background-color: #d1202f;
+    }
+
+    .approval-action-view {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        z-index: 1;
+        
+        .button-group button {            
+            &:first-child {
+                border-top-left-radius: 2px;
+                border-bottom-left-radius: 2px;            }
+
+            &:only-child {
+                border-radius: 2px;               
+            }
+
+            &:last-child {
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+                
+            }
+        }
+    }
+
+    .noBorder {
+        border: 0px !important;
+
+        &:hover {
+            .approval-actions {
+                visibility: visible;
+            }
+        }
+
+        .approval-actions {
+            visibility: hidden;
+        }
+    }
+
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .solid {
+        border-bottom: 3px solid #cacacd;
+        margin: 0;
+    }
+
+    .cardTitle {
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width:98%;
+}
+}
+
+#mainView {
+    .wfTask-Transitions, .wfTask-moveToInbox {
+        background-color: #efeff6;
+        color: #32323c;
+        min-height: 30px;
+        min-width: 30px;
+        margin:0 !important;
+    }
+    /*.toolbar__section.toolbar__section--center {
+       margin-left:0px !important;
+    }*/
+}
+
+#navigationView {
+    height: 100%;
+    width: 100%;
+}
+
+#propertiesView {
+    height: 100%;
+    width: 100%;
+}
+
+#documentView {
+    height: 100%;
+    width: 100%;
+}
+
+#documentViewViewer {
+    overflow: auto;
+}
+
+#the-canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.icon-folder {
+    //color: #b4630e
+}

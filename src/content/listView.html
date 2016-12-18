@@ -1,0 +1,99 @@
+﻿{{#with item.sourceItem}}
+<div>
+    <div class="approval-list-item">
+        <div data-expander id="expander">
+            <div class="approval-list-invoice-summary" data-expander="" data-expand-target=".expandable">
+                <div class="fullWidth">
+                    <h3><b><span>{{vendorName}}</span></b></h3>
+                    <div>
+                        <span class="property-label">{{i18n 'content.invoiceNumber'}}</span><br />
+                        <span class="property-value">{{invoiceNumber}}</span>
+                    </div>
+                    <div>
+                        <span class="property-label">{{i18n 'content.invoiceDate'}}</span><br />
+                        <span class="property-value">{{invoiceDate}}</span>
+                    </div>
+                </div>
+                <div class="segment-right">
+                    <div class="right">
+                        <h3><span>{{amount}}</span></h3>
+
+                        <div>
+                            <span class="property-label">{{i18n 'content.dueDate'}}</span><br />
+                            <span class="badge {{#if isOverDue }}red{{/if}}">{{dueDate}}</span><br /><br />
+                        </div>
+                    </div>
+                    <div class="approval-actions button-group right">
+                        {{#unless task.canMoveToMyInbox}}
+                        <button id="Reject" class="wfTask-Transitions" >
+                            <span class="icon icon-16 icon-error"></span>
+                            <span id="RejectText">{{i18n 'global.reject'}}</span>
+                        </button>
+                        <button id="Approve" class="wfTask-Transitions" >
+                            <span class="icon icon-16 icon-valid"></span>
+                            <span id="ApproveText">{{i18n 'global.approve'}}</span>
+                        </button>
+                        {{/unless}}
+                        {{#if task.canMoveToMyInbox}}
+                        <button id="moveToMyInbox" class="wfTask-moveToInbox" >
+                            <span class="icon icon-16 icon-error"></span>
+                            <span id="moveToMyInboxText">{{i18n 'global.moveToMyInbox'}}</span>
+                        </button>
+                        {{/if}}
+                        {{#if task.canMoveToPreviousInbox}}
+                        <button id="moveToPreviousInbox" class="wfTask-moveToInbox" >
+                            <span class="icon icon-16 icon-error"></span>
+                            <span id="moveToPreviousInboxText">{{i18n 'global.moveToPreviousInbox'}}</span>
+                        </button>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="expandable collapsed">
+        <div class="content" style="margin:0 2% 0 2%;">
+            <div class="approval-list-invoice-summary" data-expander="" data-expand-target=".expandable">
+                <div class="card form--discrete details">
+                    <h2 class="card__header"><a href="#">{{i18n 'content.docindex'}} ({{this.archive}})</a></h2>
+                    <div class="card__body">
+                        <table>
+                            {{#each fieldname}}
+                            <tr>
+                                <td >
+                                    <span class="property-label">{{this.name}}</span>
+                                    <span class="property-value">{{this.value}}</span>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </table>
+                    </div>
+                </div>
+                <div class="card form--discrete details" style="margin-left:5%">
+                    <h2 class="card__header"><a href="#">{{i18n 'content.workflowHistory'}}</a></h2>
+                    <div class="card__body">
+                        <table>
+                            <tr>
+                                <td>
+                                    <span class="property-label">{{i18n 'content.startDate'}}</span>
+                                </td>
+                                <td>
+                                    {{startDate}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="property-label">{{i18n 'content.lastOwner'}}</span>
+                                </td>
+                                <td>
+                                    {{lastOwner}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/with}}

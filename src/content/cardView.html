@@ -1,0 +1,55 @@
+﻿{{#with item.sourceItem}}
+    <div class="card form--discrete noBorder">
+        <h3 class="cardTitle" title="{{vendorName}}"><b>{{vendorName}}</b></h3>
+          <div class="solid"></div><br /> 
+        <h3><span>{{amount}}</span></h3>
+        <div class="card__body" >
+          
+            <div class="left">
+                <span class="property-label">{{i18n 'content.invoiceNumber'}}</span>
+                {{invoiceNumber}}
+            </div>
+            <div class="right">
+                <span class="property-label"> {{i18n 'content.invoiceDate'}}</span>
+                {{invoiceDate}}
+                </div>
+            </div>
+        <div class="card__footer">
+            <br /><br />     <div class="solid"></div><br /> 
+            <div class="left">
+                <span class="property-label">{{i18n 'content.dueDate'}}</span>
+                <div class="badge {{#if isOverDue }}red{{/if}}">{{dueDate}}</div>
+
+            </div>
+                <div class="right">
+                    <div class="approval-actions button-group">
+                        {{#unless task.canMoveToMyInbox}}
+                        <button id="Reject" class="wfTask-Transitions">
+                            <span class="icon icon-16 icon-error"></span>
+                            <span id="RejectText">{{i18n 'global.reject'}}</span>
+                        </button>
+                        <button id="Approve" class="wfTask-Transitions">
+                            <span class="icon icon-16 icon-valid"></span>
+                            <span id="ApproveText">{{i18n 'global.approve'}}</span>
+                        </button>
+                        {{/unless}}
+                    </div>
+                    <div class="approval-actions button-group" style="display:inherit">
+                        {{#if task.canMoveToMyInbox}}
+                        <button id="moveToMyInbox" class="wfTask-moveToInbox">
+                            <span class="icon icon-16 icon-error"></span>
+                            <span id="moveToMyInboxText">{{i18n 'global.moveToMyInbox'}}</span>
+                        </button>
+                        {{/if}}
+                        {{#if task.canMoveToPreviousInbox}}
+                        <button id="moveToPreviousInbox" class="wfTask-moveToInbox fullWidth">
+                            <span class="icon icon-16 icon-error"></span>
+                            <span id="moveToPreviousInboxText">{{i18n 'global.moveToPreviousInbox'}}</span>
+                        </button>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+    </div>
+
+{{/with}}

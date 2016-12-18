@@ -1,0 +1,53 @@
+# Saperion Experience Template
+
+Saperion App Template for Invoice Approval, based on the Saperion JS SDK and the Experience Framework.
+
+---
+Please read this information carefully before starting to work with the project.
+
+---
+
+## Technology
+- javasscript
+- html
+- Experience Framework (Backbone)
+- NodeJS
+
+## Development Environment
+- nodejs  ([http://nodejs.org]())
+  1. Download and Install [NodeJS](http://nodejs.org/)
+  2. Check your PATH Variable that node js is include or type "node" in a console
+  3. run `npm install` in the project root directory
+     if npm throws an error under windows check that the following directory is existing: %appdata%\Roaming\npm
+
+## Build Environment
+- gulp,
+- nodejs
+
+## first steps
+
+npm install
+    --> install all dependecies
+npm start
+    --> deploys to a local webserver and shows the app in the brwoser
+
+npm run ci
+    --> builds a minified deployable zip with test results (lint, junit and coverage)
+
+
+## more detailed build steps:
+
+build scripts for saperion template
+gulp buildPackage --> builds only the package (minified)
+gulp buildPackage-debug --> builds only the package (not minified)
+gulp dist --> generates a deployable folder with runtime, dependend packages and package (minified)
+gulp dist-debug --> generates a deployable folder with runtime, dependend packages and package (not minified)
+gulp serve-debug --> sets up a webserver with live reload
+gulp serve --> sets up a server without live reload
+gulp ci --> generates a deployable tested zip with runtime, dependend packages and package (minified)
+gulp ci-debug --> generates a deployable tested zip with runtime, dependend packages and package (not minified)
+
+
+
+
+

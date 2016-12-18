@@ -1,0 +1,63 @@
+﻿<div id="mainView">
+    <div data-pane="toolbar" data-dock="top" data-sizing="fixed">
+        <div class="toolbar main-toolbar">
+            <div class="toolbar__section--left">
+                <button class="navigation-collapse-button btn--selected" type="button" data-toggle-button
+                        title="{{i18n 'toolbar.toggleNavigation'}}">
+                    <span class="icon icon-16 icon-contextual_menu"></span>
+                </button>
+                <div class="divider"></div>
+                <div id="transition-actions" style="display:none">
+                    <button id="Reject" class="wfTask-Transitions" title="{{i18n 'global.reject'}}">
+                        <span class="icon icon-16 icon-error"></span>
+                        <span id="RejectText">{{i18n 'global.reject'}}</span>
+                    </button>
+                    <button id="Approve" class="wfTask-Transitions" title="{{i18n 'global.approve'}}">
+                        <span class="icon icon-16 icon-valid"></span>
+                        <span id="ApproveText">{{i18n 'global.approve'}}</span>
+                    </button>
+                </div>
+                <button id="moveToMyInbox" style="display:none" class="wfTask-moveToInbox" title="{{i18n 'global.moveToMyInbox'}}">
+                    <span class="icon icon-16 icon-error"></span>
+                    <span id="moveToMyInboxText">{{i18n 'global.moveToMyInbox'}}</span>
+                </button>
+                <button id="moveToPreviousInbox" style="display:none" class="wfTask-moveToInbox" title="{{i18n 'global.moveToPreviousInbox'}}">
+                    <span class="icon icon-16 icon-error"></span>
+                    <span id="moveToPreviousInboxText">{{i18n 'global.moveToPreviousInbox'}}</span>
+                </button>
+            </div>
+            <div class="toolbar__section--center">
+            </div>
+            <div class="toolbar__section--right">
+                <div class="button-group" data-button-group>
+                    <button data-view="list" class="grid-view" data-toggle-button title="{{i18n 'toolbar.gridView'}}">
+                        <span class="icon  icon-spreadsheet"></span>
+                    </button>
+                    <button data-view="grid" class="list-view btn--selected" data-toggle-button title="{{i18n 'toolbar.listView'}}">
+                        <span class="icon  icon-list"></span>
+                    </button>
+                    <button data-view="card" class="card-view" data-toggle-button title="{{i18n 'toolbar.cardView'}}">
+                        <span class="icon  icon-batch_image"></span>
+                    </button>
+                </div>
+                <div class="divider"></div>
+                <div class="toolbar-group">
+                    <!--<button class="properties-collapse-button btn--selected" type="button" data-toggle-button>
+                        <span class="icon icon-16 icon-contextual_menu"></span>
+                    </button>-->
+                    <button class="document-collapse-button btn--selected" type="button" data-toggle-button
+                            title="{{i18n 'toolbar.toggleDocuments'}}">
+                        <span class="icon icon-16 icon-contextual_menu"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation-pane" data-pane="navigation" data-dock="left" data-width="250" data-min-width="150"
+         data-max-width="250"></div>
+    <div class="content-pane" data-pane="content" data-min-width="550"></div>
+    <div class="document-pane" data-pane="document" data-dock="right" data-width="600" data-min-width="200"
+         data-max-width="750"></div>
+    <!--<div class="properties-pane" data-pane="properties" data-dock="right" data-width="250" data-min-width="150"
+         data-max-width="500"></div>-->
+</div>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <meta http-equiv='X-UA-Compatible' content='IE=Edge'/>
+        <meta name='viewport' content='user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+        <meta name='apple-mobile-web-app-capable' content='yes' />
+        <meta name='apple-mobile-web-app-status-bar-style' content='white' />
+
+        <link rel='shortcut icon' type='image/ico' href='packages/framework-brand/src/resources/images/Icon-Artaker-64.ico'/>
+
+        <!-- Web App Icons -->
+        <link rel='apple-touch-icon-precomposed' href='packages/framework-brand/src/resources/images/appIcons/Icon-60.png'/>
+        <link rel='apple-touch-icon-precomposed' sizes='76x76' href='packages/framework-brand/src/resources/images/appIcons/Icon-76.png'/>
+        <link rel='apple-touch-icon-precomposed' sizes='120x120' href='packages/framework-brand/src/resources/images/appIcons/Icon-60@2x.png'/>
+        <link rel='apple-touch-icon-precomposed' sizes='152x152' href='packages/framework-brand/src/resources/images/appIcons/Icon-76@2x.png'/>
+
+        <!-- Web App Startup Images -->
+        <!-- iPad retina portrait startup image -->
+        <link href='packages/framework-brand/src/resources/images/launchScreens/ipad@2x-portrait_1536x2008.png'
+            media='(device-width: 768px) and (device-height: 1024px)
+                 and (-webkit-device-pixel-ratio: 2)
+                 and (orientation: portrait)'
+            rel='apple-touch-startup-image'>
+
+        <!-- iPad retina landscape startup image -->
+        <link href='packages/framework-brand/src/resources/images/launchScreens/ipad@2x-landscape_2048x1496.png'
+              media='(device-width: 768px) and (device-height: 1024px)
+                     and (-webkit-device-pixel-ratio: 2)
+                     and (orientation: landscape)'
+              rel='apple-touch-startup-image'>
+
+        <!-- iPad non-retina portrait startup image -->
+        <link href='packages/framework-brand/src/resources/images/launchScreens/ipad-portrait_768x1004.png'
+              media='(device-width: 768px) and (device-height: 1024px)
+                     and (-webkit-device-pixel-ratio: 1)
+                     and (orientation: portrait)'
+              rel='apple-touch-startup-image'>
+
+        <!-- iPad non-retina landscape startup image -->
+        <link href='packages/framework-brand/src/resources/images/launchScreens/ipad-landscape_1024x748.png'
+              media='(device-width: 768px) and (device-height: 1024px)
+                     and (-webkit-device-pixel-ratio: 1)
+                     and (orientation: landscape)'
+              rel='apple-touch-startup-image'>
+
+        <!-- iPhone 6 Plus portrait startup image -->
+        <link href='packages/framework-brand/src/resources/images/launchScreens/iphone6p-portrait_1242x2148.png'
+              media='(device-width: 414px) and (device-height: 736px)
+                     and (-webkit-device-pixel-ratio: 3)
+                     and (orientation: portrait)'
+              rel='apple-touch-startup-image'>
+
+        <!-- iPhone 6 Plus landscape startup image -->
+        <link href='packages/framework-brand/src/resources/images/launchScreens/iphone6p-landscape_2208x1182.png'
+              media='(device-width: 414px) and (device-height: 736px)
+                     and (-webkit-device-pixel-ratio: 3)
+                     and (orientation: landscape)'
+              rel='apple-touch-startup-image'>
+
+        <!-- iPhone 6 startup image -->
+        <link href='packages/framework-brand/src/resources/images/launchScreens/iphone6_750x1294.png'
+              media='(device-width: 375px) and (device-height: 667px)
+                     and (-webkit-device-pixel-ratio: 2)'
+              rel='apple-touch-startup-image'>
+
+        <!-- iPhone 5 startup image -->
+        <link href='packages/framework-brand/src/resources/images/launchScreens/iphone5_640x1096.png'
+              media='(device-width: 320px) and (device-height: 568px)
+                     and (-webkit-device-pixel-ratio: 2)'
+              rel='apple-touch-startup-image'>
+
+        <!-- iPhone < 5 retina startup image -->
+        <link href='packages/framework-brand/src/resources/images/launchScreens/iphone4@2x_640x920.png'
+              media='(device-width: 320px) and (device-height: 480px)
+                     and (-webkit-device-pixel-ratio: 2)'
+              rel='apple-touch-startup-image'>
+
+        <!-- iPhone < 5 non-retina startup image -->
+        <link href='packages/framework-brand/src/resources/images/launchScreens/iphone4_320x460.png'
+              media='(device-width: 320px) and (device-height: 480px)
+                     and (-webkit-device-pixel-ratio: 1)'
+              rel='apple-touch-startup-image'>
+
+        <!-- loading pdf.js, can also be done from CDN -->
+        <script src='devPackages/artaker-saperion-workflow/src/js/lib/compatibility.js'></script>
+        <script src='devPackages/artaker-saperion-workflow/src/js/lib/pdf.js'></script>
+
+        <!-- loading saperion ecm sdk from amazon s3 
+         <script src="https://artifacts-eu.s3.amazonaws.com/saperion/ecm/client/sdk/latest/saperion-sdk-browser-min-snapshot.js"></script>
+		 -->
+		 <script src='packages/saperion_sdk_latest.js'></script>
+		 
+        <!-- loading experience framework -->
+        <script data-main='packages/framework-runtime/framework-runtime.min' src='packages/requirejs/require.js'></script>
+
+        <!-- loading requireConfiguration -->
+        <script src='devPackages/artaker-saperion-workflow/src/js/util/configureRequire.js'></script>
+    </head>
+    <body id='body'>
+        <div id='container' class='container'></div>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+{
+  "de": {
+    "global": {
+      "reject": "Ablehnen",
+      "moveToMyInbox": "Übernehmen",
+      "moveToPreviousInbox": "Zurücklegen",
+      "approve": "Genehmigen"
+    },
+    "toolbar": {
+      "toggleDocuments": "Dokumentenanicht umschalten",
+      "toggleNavigation": "Navigation umschalten",
+      "cardView": "Karten Ansicht",
+      "listView": "Listen Ansicht",
+      "gridView": "Tabellen Ansicht"      
+    },
+    "content": {
+      "invoiceDate": "Rechnungsdatum",
+      "invoiceNumber": "Rechnungsnummer",
+      "vendorName": "Name des Verkäufers",
+      "address": "Adresse",
+      "docindex": "Dokument Index",
+      "companyName": "Firma",
+      "street": "Straße",
+      "city": "Stadt",
+      "postalCode": "Postleitzahl",
+      "country": "Land",
+      "workflowHistory": "Prozesshistorie",
+      "startDate": "Startzeit",
+      "lastOwner": "Letzter Besitzer",
+      "dueDate": "Fälligkeitsdatum",
+      "amount": "Summe",
+      "assignedBy": "Zugewiesen von"
+    },
+    "viewer": {
+      "content": {
+        "noContent": "Bitte wählen Sie ein Dokument aus",
+        "errorInLoad": "Kann das Dokument nicht laden"
+      },
+      "toolbar": {
+        "btnRotateLeft": "Nach links rotieren",
+        "btnRotateRight": "Nach rechts rotieren",
+        "prevPageButton": "Vorherige Seite",
+        "nextPageButton": "Nächste Seite",
+        "btnZoomOut": "Verkleinern",
+        "btnZoomIn": "Vergrößern",
+        "btnBestFit": "Auf Seite anpassen",
+        "btnFitWidth": "Auf Breite anpassen",
+        "btnFitHeight": "Auf Höhe anpassen",
+        "btnOriginalSize": "Zurücksetzen",
+        "lblCurrentPage": "Aktuelle Seite",
+        "lblPageCount": "Gesamtzahl"
+      }
+    }
+  },
+  "en": {
+    "global": {
+      "reject": "Reject",
+      "moveToMyInbox": "Move to my Inbox",
+      "moveToPreviousInbox": "Move to previous Inbox",
+      "approve": "Approve"
+    },
+    "toolbar": {
+      "toggleDocuments": "Toggle Documents",
+      "toggleNavigation": "Toggle Navigation",
+      "cardView": "Card View",
+      "listView": "List View",
+      "gridView": "Grid View"     
+    },
+    "content": {
+      "invoiceDate": "Invoice Date",
+      "invoiceNumber": "Invoice Number",
+      "vendorName": "Vendor",
+      "address": "ADDRESS",
+      "companyName": " Company Name",
+      "street": "Street",
+      "city": "City",
+      "postalCode": "Postal Code",
+      "country": "Country",
+      "workflowHistory": "WORKFLOW HISTORY",
+      "startDate": "Start Date",
+      "lastOwner": "Last Owner",
+      "dueDate": "Due Date",
+      "amount": "Amount",
+      "assignedBy": "Assigned by"
+    },
+    "viewer": {
+      "content": {
+        "noContent": "please select an item",
+        "errorInLoad": "cannot load the document"
+      },
+      "toolbar": {
+        "btnRotateLeft": "rotate left",
+        "btnRotateRight": "rotate right",
+        "prevPageButton": "previous page",
+        "nextPageButton": "next page",
+        "btnZoomOut": "zoom out",
+        "btnZoomIn": "zoom in",
+        "btnBestFit": "best fit",
+        "btnFitWidth": "fit to width",
+        "btnFitHeight": "fit to height",
+        "btnOriginalSize": "reset",
+        "lblCurrentPage": "current page",
+        "lblPageCount": "page count"
+      }
+    }
+  }
+}

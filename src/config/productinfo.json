@@ -1,0 +1,63 @@
+{
+  "applicationName": "Artaker Saperion Workflow",
+  "copyright": "Based of Saperion Experience Template (c) 2016 by Lexmark",
+  "companyName": "Artaker Computersysteme GmbH",
+  "description": "Artaker Saperion Workflow Inbox based of Saperion Experience Template (c) 2016 by Lexmark",
+  "urls": {
+    "companyUrl": "http://www.artaker.at",
+    "supportLink": "https://http://artaker.at/unternehmen/support/"
+  },
+  "technicalNames": {
+    "companyName": "Artaker Computersysteme GmbH",
+    "productName": "Artaker Saperion Workflow"
+  },
+  "currentServer": 1,
+  "availableServers": [
+    {
+      "id": 1,
+      "name": "PZ Demo System",
+      "ecmsUrl": "http://192.168.20.16:8080/ecms/",
+      "authUrl": "http://192.168.20.16:8080/ecms-auth/"
+    },
+    {
+      "id": 2,
+      "name": "Beta System",
+      "ecmsUrl": "https://ecm-service.psft.co/ecms/",
+      "authUrl": "https://ecm-service.psft.co/ecms-auth/"
+    },
+    {
+      "id": 3,
+      "name": "Demo System",
+      "ecmsUrl": "http://ecm-service.saperion.com/ecms/",
+      "authUrl": "http://ecm-service.saperion.com/ecms-auth/"
+    }
+  ],
+  "productVersion": "0.1",
+  "platforms": {
+    "browser": true
+  },
+  "features": {
+  },
+  "archiveConfig": { 
+    "test": [
+      {
+        "fieldname": "lfdnr",
+        "dispname": "Saperion-ID",
+        "type": "int"
+      },
+      {
+        "fieldname": "dokumenttyp",
+        "dispname": "Dokumenttyp",
+        "type": "string"
+      },
+      {
+        "fieldname": "name",
+        "dispname": "Name",
+        "type": "string"
+      }
+    ]
+  },
+  "workflowFields": {
+    
+  }
+}
