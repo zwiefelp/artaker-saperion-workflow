@@ -1,6 +1,7 @@
-# Saperion Experience Template
+# Artaker Saperion Invoice Approval App
 
-Saperion App Template for Invoice Approval, based on the Saperion JS SDK and the Experience Framework.
+Artaker Saperion App for Invoice Approval, based on the Saperion JS SDK and the Experience Framework.
+Code is derived from the original Saperion Approval App Template from Lexmark
 
 ---
 Please read this information carefully before starting to work with the project.
