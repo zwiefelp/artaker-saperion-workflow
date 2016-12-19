@@ -195,16 +195,6 @@ define(['framework-core', 'framework-controls', 'template!content/contentView.ht
                                                     }
                                                 }
                                                         
-/*
-                                                if (doc.indexData.hasOwnProperty('invoicereceivedate')) {
-                                                    item.startDate = new Date(doc.indexData['invoicereceivedate'].propertyValue).toLocaleDateString('en-US', {
-                                                        day: 'numeric',
-                                                        month: 'short',
-                                                        year: 'numeric'
-                                                    });
-                                                }
-                                                */
-
                                             },
                                             function (error) {
                                                 self.appContext.log('getDocument failed because of', error);
