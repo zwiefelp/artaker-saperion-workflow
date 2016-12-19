@@ -1,8 +1,0 @@
-{
-    "jscodehints.detectedExclusions": [
-        "C:/Users/zp/Downloads/artaker-saperion-workflow/dist/www/packages/framework-require-plugins/framework-require-plugins.min.js",
-        "C:/Users/zp/Downloads/artaker-saperion-workflow/packages/jquery/src/outro.js",
-        "C:/Users/zp/Downloads/artaker-saperion-workflow/packages/jquery/src/attributes/prop.js",
-        "C:/Users/zp/Downloads/artaker-saperion-workflow/src/js/views/contentView.js"
-    ]
-}

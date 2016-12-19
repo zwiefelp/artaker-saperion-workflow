@@ -28,9 +28,9 @@
         "en": {
             "productName": "Saperion",
             "productFullName": "Saperion Experience",
-            "loginLogo": "./resources/images/ACS_Login.png",
-            "loginLogoMobile": "./resources/images/ACS_Login.png",
-            "headerLogo": "./resources/images/Icon-Artaker-64.ico"
+            "loginLogo": "/devPackages/artaker-saperion-workflow/src/images/ACS_Login.png",
+            "loginLogoMobile": "devPackages/artaker-saperion-workflow/src/images/ACS_Login.png",
+            "headerLogo": "/devPackages/artaker-saperion-workflow/src/images/Icon-Artaker-64.ico"
         }
     }
 }
