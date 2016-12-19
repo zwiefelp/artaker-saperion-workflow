@@ -145,7 +145,21 @@ define(['framework-core', 'framework-controls', 'template!content/contentView.ht
                                        
                                         var formatValue = function(value) {
                                             console.log(value)
-                                            return value.propertyValue
+                                            var retValue = value.propertyValue
+                                            
+                                            if (value.type == 'DATE') {
+                                                retValue = new Date(retValue).toLocaleDateString('de-DE', {
+                                                    day: 'numeric',
+                                                    month: 'short',
+                                                    year: 'numeric'
+                                                })
+                                            }
+
+                                            if (value.type == 'FLOAT') {
+                                                retValue = parseFloat(retValue).toFixed(2).toLocaleString('de-DE')
+                                            }
+
+                                            return retValue
                                         }
 
                                         task.document.refresh().then(

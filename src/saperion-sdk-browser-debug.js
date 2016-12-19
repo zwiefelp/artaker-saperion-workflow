@@ -9425,7 +9425,7 @@ var log = require('./../internal/logManager.js');
 var http = require('./../communication/httpHelper');
 var util = require('./../internal/utilities');
 var PageInfo = require('./../common/pageInfo');
-//var Archive = require('./archive');
+var Archive = require('./archive');
 var ContentElement = require('./contentElement');
 var Actor = require('./../common/actorReference');
 
@@ -9468,11 +9468,14 @@ function Document(serviceConnection, json, archive) {
     //TODO: remove later: just temporary
     var _contentJson = '';
 
-    var _archive = {};
+    var _archive; // = {};
 
     if (archive !== undefined) {
         // TODO: check if archive is really an archive
-        _archive = archive;
+        if (archive.hasOwnProperty('contentType')) {
+          _archive = archive;
+        }
+        
     }
 
     var _creationDate;
@@ -9515,11 +9518,9 @@ function Document(serviceConnection, json, archive) {
                     //if json.archiveReference is available in JSON: call was potentially from document.update
                     //if json.archiveReference is NOT available in JSON: call was from potetially from archive.getDocuments
                     //There is no need to update _archive if its already existing (would "never" change and from document.update there will be just a reference)
-                    //_archive = new Archive(_self.serviceConnection, json.archiveReference);
-                    //_archive = json.archiveReference
+                    //_archive = new Archive(_self.serviceConnection, json.archiveReference);                    
+                    _archive = json.archiveReference
                 }
-
-                _archive = json.archiveReference
 
                 //indexData
                 _indexData = json.indexData || _indexData;
@@ -9917,7 +9918,7 @@ Document.getDocumentsFromArchive = function (archive, page, detailed) {
 };
 
 module.exports = Document;
-},{"./../common/actorReference":39,"./../common/pageInfo":40,"./../communication/httpHelper":44,"./../internal/logManager.js":52,"./../internal/utilities":53,"./contentElement":48}],51:[function(require,module,exports){
+},{"./../common/actorReference":39,"./../common/pageInfo":40,"./../communication/httpHelper":44,"./../internal/logManager.js":52,"./../internal/utilities":53,"./contentElement":48,"./archive":47}],51:[function(require,module,exports){
 // in this class we defining the public sdk api and exposing all necessary objects / functions
 
 var logger = require('./internal/logManager.js');
