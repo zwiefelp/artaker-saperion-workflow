@@ -25,6 +25,13 @@
                     </div>
                     <div class="approval-actions button-group right">
                         {{#unless task.canMoveToMyInbox}}
+                        {{#each transitions}}
+                        <button id={{this.description}} class="wfTask-Transitions" >
+                            <span class="icon icon-16 icon-error"></span>
+                            <span id={{this.description}}Text>{{this.description}}</span>
+                        </button>
+                        {{/each}}
+                        <!--
                         <button id="Reject" class="wfTask-Transitions" >
                             <span class="icon icon-16 icon-error"></span>
                             <span id="RejectText">{{i18n 'global.reject'}}</span>
@@ -33,6 +40,7 @@
                             <span class="icon icon-16 icon-valid"></span>
                             <span id="ApproveText">{{i18n 'global.approve'}}</span>
                         </button>
+                        -->
                         {{/unless}}
                         {{#if task.canMoveToMyInbox}}
                         <button id="moveToMyInbox" class="wfTask-moveToInbox" >

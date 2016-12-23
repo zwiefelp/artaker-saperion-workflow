@@ -164,6 +164,7 @@ define(['framework-core', 'framework-controls', 'template!content/contentView.ht
 
                                         task.document.refresh().then(
                                             function (doc) {
+                                                console.log("------- New Dokument ----------------------------------------------------")
                                                 console.log(doc.archive)
                                                 item.archive = doc.archive.name                
                                                 item.fieldname = []
@@ -204,8 +205,18 @@ define(['framework-core', 'framework-controls', 'template!content/contentView.ht
                                     // Rendering the Transitions for each task
                                     task.getTransitions().then(
                                         function (transitions) {
-                                            console.log(transitions.data)
                                             item.transitions = transitions.data;
+                                            console.log(transitions)
+                                            /*
+                                            item.transitions = []
+                                            transitions.data.forEach( function (transition) {
+                                                console.log(transition.description)
+                                                item.transitions.push({
+                                                    "description": transition.description,
+                                                    "id": transition.id
+                                                })
+                                            })
+                                            */
                                         }, function (error) {
                                             self.appContext.log('error getting transitions');
                                         });
