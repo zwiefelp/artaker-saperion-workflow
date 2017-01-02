@@ -2,7 +2,7 @@
 <div>
     <div class="approval-list-item">
         <div data-expander id="expander">
-            <div class="approval-list-invoice-summary" data-expander="" data-expand-target=".expandable">
+            <div class="approval-list-invoice-summary">
                 <div class="fullWidth">
                     <h3><b><span>{{vendorName}}</span></b></h3>
                     <div>
@@ -13,6 +13,10 @@
                         <span class="property-label">{{i18n 'content.invoiceDate'}}</span><br />
                         <span class="property-value">{{invoiceDate}}</span>
                     </div>
+                    <button data-expander="" data-expand-target=".expandable">
+                        <span class="icon icon-arrow_bottom" aria-hidden="true"></span>
+                        <span>Index</span>
+                    </button>
                 </div>
                 <div class="segment-right">
                     <div class="right">
@@ -24,14 +28,8 @@
                         </div>
                     </div>
                     <div class="approval-actions button-group right">
-                        {{#unless task.canMoveToMyInbox}}
-                        {{#each transitions}}
-                        <button id={{this.description}} class="wfTask-Transitions" >
-                            <span class="icon icon-16 icon-error"></span>
-                            <span id={{this.description}}Text>{{this.description}}</span>
-                        </button>
-                        {{/each}}
                         <!--
+                        {{#unless task.canMoveToMyInbox}}
                         <button id="Reject" class="wfTask-Transitions" >
                             <span class="icon icon-16 icon-error"></span>
                             <span id="RejectText">{{i18n 'global.reject'}}</span>
@@ -40,20 +38,31 @@
                             <span class="icon icon-16 icon-valid"></span>
                             <span id="ApproveText">{{i18n 'global.approve'}}</span>
                         </button>
-                        -->
                         {{/unless}}
+                        -->
+
+                        {{#each transitiondata}}
+                        <button id={{this.description}} class="wfTask-Transitions" >
+                            <span class="icon icon-16 icon-error"></span>
+                            <span id={{this.description}}Text>{{this.description}}</span>
+                        </button>
+                        {{/each}}
+
                         {{#if task.canMoveToMyInbox}}
                         <button id="moveToMyInbox" class="wfTask-moveToInbox" >
                             <span class="icon icon-16 icon-error"></span>
                             <span id="moveToMyInboxText">{{i18n 'global.moveToMyInbox'}}</span>
                         </button>
                         {{/if}}
+
                         {{#if task.canMoveToPreviousInbox}}
                         <button id="moveToPreviousInbox" class="wfTask-moveToInbox" >
                             <span class="icon icon-16 icon-error"></span>
                             <span id="moveToPreviousInboxText">{{i18n 'global.moveToPreviousInbox'}}</span>
                         </button>
                         {{/if}}
+                                                
+
                     </div>
                 </div>
             </div>

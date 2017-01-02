@@ -49,7 +49,9 @@ define(['framework-core', 'framework-controls', 'template!content/contentView.ht
                         propertyName: 'vendorName'
                     },
                     {
-                        width: 130, name: this.appContext.localize('content.amount'), propertyName: 'amount'
+                        width: 130, 
+                        name: this.appContext.localize('content.amount'), 
+                        propertyName: 'amount'
                     },
                     {
                         width: 150,
@@ -57,7 +59,9 @@ define(['framework-core', 'framework-controls', 'template!content/contentView.ht
                         propertyName: 'invoiceNumber'
                     },
                     {
-                        width: 110, name: this.appContext.localize('content.dueDate'), propertyName: 'dueDate'
+                        width: 110, 
+                        name: this.appContext.localize('content.dueDate'), 
+                        propertyName: 'dueDate'
                     },
                     {
                         width: 150,
@@ -71,9 +75,10 @@ define(['framework-core', 'framework-controls', 'template!content/contentView.ht
                     loadItemsVisual: 'button',
                     presentationType: this.currentPresentationType,
                     card: { content: CardTemplate, columnSizes: [400, 1200, 1800,Infinity] },
-                    list: {content: ListTemplate},
+                    list: { content: ListTemplate },
                     selection: 'single'
                 };
+                
 
                 // To have localization in card,list templates
                 options.helpers = _.extend({
@@ -102,6 +107,25 @@ define(['framework-core', 'framework-controls', 'template!content/contentView.ht
                         isModal: false,
                         isIndeterminate: true
                     });
+                    
+                    // Function for rendering Saperion Values
+                    var formatValue = function(value) {
+                        var retValue = value.propertyValue
+                        
+                        if (value.type == 'DATE') {
+                            retValue = new Date(retValue).toLocaleDateString('de-DE', {
+                                day: 'numeric',
+                                month: 'short',
+                                year: 'numeric'
+                            })
+                        }
+
+                        if (value.type == 'FLOAT') {
+                            retValue = parseFloat(retValue).toFixed(2).toLocaleString('de-DE')
+                        }
+
+                        return retValue
+                    }
 
                     // Get the workflow tasks based on inboxItem
                     this.inboxItem = InboxItem;
@@ -138,34 +162,14 @@ define(['framework-core', 'framework-controls', 'template!content/contentView.ht
                                         isOverDue: duedate < Date.now(),
                                         lastOwner: task.previousActor.name
                                     };
-                                    
+
                                     // Rendering data using document object of task
                                     // PZ: Changed to generic Archive Fields and Fields from ArchiveConfig from productinfo.json
                                     if (task.hasDocument) {
-                                       
-                                        var formatValue = function(value) {
-                                            console.log(value)
-                                            var retValue = value.propertyValue
-                                            
-                                            if (value.type == 'DATE') {
-                                                retValue = new Date(retValue).toLocaleDateString('de-DE', {
-                                                    day: 'numeric',
-                                                    month: 'short',
-                                                    year: 'numeric'
-                                                })
-                                            }
-
-                                            if (value.type == 'FLOAT') {
-                                                retValue = parseFloat(retValue).toFixed(2).toLocaleString('de-DE')
-                                            }
-
-                                            return retValue
-                                        }
 
                                         task.document.refresh().then(
                                             function (doc) {
                                                 console.log("------- New Dokument ----------------------------------------------------")
-                                                console.log(doc.archive)
                                                 item.archive = doc.archive.name                
                                                 item.fieldname = []
                                                 var archiveConfig = self.appContext.getArchiveConfig()
@@ -173,7 +177,7 @@ define(['framework-core', 'framework-controls', 'template!content/contentView.ht
                                                 if (archiveConfig.hasOwnProperty(item.archive)) {
                                                     // Append only Fields from productinfo.json for specific Archive
                                                     var archiveFields = archiveConfig[item.archive]
-                                                    console.log("Found Archive " + item.archive + " in Config. NumFields: " + archiveFields.length)
+                                                    //console.log("Found Archive " + item.archive + " in Config. NumFields: " + archiveFields.length)
 
                                                     if ( archiveFields.length >= 0 ) {                                                        
                                                         archiveFields.forEach( function (field) {
@@ -187,7 +191,7 @@ define(['framework-core', 'framework-controls', 'template!content/contentView.ht
                                                     }
                                                 } else {                                                        
                                                     // Append all indexData of Dokument to DokumentIndex
-                                                    console.log("Not Found Archive " + item.archive + " in Config. Using generic Fields")
+                                                    //console.log("Not Found Archive " + item.archive + " in Config. Using generic Fields")
                                                     for (var key in doc.indexData) {
                                                         item.fieldname.push({
                                                             'name': key,
@@ -203,20 +207,18 @@ define(['framework-core', 'framework-controls', 'template!content/contentView.ht
                                     }
 
                                     // Rendering the Transitions for each task
+                                    item.transitiondata = []
                                     task.getTransitions().then(
                                         function (transitions) {
+                                            console.log("Evaluating Transition for doc " + task.subject + " = " + transitions.data)
                                             item.transitions = transitions.data;
-                                            console.log(transitions)
-                                            /*
-                                            item.transitions = []
                                             transitions.data.forEach( function (transition) {
-                                                console.log(transition.description)
-                                                item.transitions.push({
-                                                    "description": transition.description,
-                                                    "id": transition.id
+                                                console.log("push: " + transition.description)
+                                                item.transitiondata.push({
+                                                    'id': transition.id,
+                                                    'description': transition.description
                                                 })
                                             })
-                                            */
                                         }, function (error) {
                                             self.appContext.log('error getting transitions');
                                         });
@@ -256,7 +258,7 @@ define(['framework-core', 'framework-controls', 'template!content/contentView.ht
             },
 
             /**
-             * Applies the trasition (Approve/Reject) on selected worflow task
+             * Applies the trasition on selected worflow task
              * @param event identifier which button was pressed
              */
             onApplyTransition: function (event) {
